@@ -6,7 +6,9 @@ import androidx.activity.viewModels
 import androidx.navigation.NavController
 import com.tech.presentation.SatellitesListViewModel
 import com.tech.satelittes.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
