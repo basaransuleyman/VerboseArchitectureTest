@@ -21,6 +21,8 @@ navigation = "2.4.2"
 constraint = "2.1.2"
 android-activity = "1.6.1"
 coroutinesCore = "1.6.3"
+navigation-compose = "2.5.1"
+fragment = "1.5.2"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -44,12 +46,14 @@ navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-kt
 navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
 androidx-constraint-layout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraint" }
 androidx-activitiy = { module = "androidx.activity:activity-compose", version.ref = "android-activity" }
+androidx-navigation = { module = "androidx.navigation:navigation-compose", version.ref = "navigation-compose" }
 coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutinesCore" }
+fragment = { module = "androidx.fragment:fragment-ktx", version.ref = "fragment" }
 
 [plugins]
 com-android-application = { id = "com.android.application", version.ref = "agp" }
 org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "org-jetbrains-kotlin-android" }
 com-android-library = { id = "com.android.library", version.ref = "agp" }
-com-android-dagger = {id = "com.google.dagger.hilt.android", version.ref = "hilt"}
+com-android-dagger = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 [bundles]
 
