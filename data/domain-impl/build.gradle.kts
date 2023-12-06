@@ -43,4 +43,9 @@ dependencies {
 
     implementation(libs.hilt.core)
     kapt(libs.hilt.compiler)
+
+    testImplementation(libs.junit)
+    testImplementation(libs.truth.core)
+    testImplementation(libs.mockk)
+    testImplementation(libs.coroutines.test)
 }
