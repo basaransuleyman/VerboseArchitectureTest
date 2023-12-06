@@ -3,53 +3,56 @@
 ![CI Status](https://github.com/basaransuleyman/tech/actions/workflows/ci.yml/badge.svg)
 
 
-## Mimari
-Clean Architecture prensiplerine dayalı olarak inşa edilmiştir. Temel mimari bileşenleri şunlardır:
+## Architecture
+It is built based on Clean Architecture principles. The main architectural components are:
 
-Data Module: API ; ağ işlemleri için ayrı bir modül içerir. Domain-Impl : Domain baglantısı sağlanır ve ayrılarak domain implementasyonu kırılmıştır diğer modullerden. Persistence: Local işlemler için oluşturulmuş module.
+Data Module: 
+1)API Module: Contains a separate module for API and network operations. 
+2)Domain-Impl: Establishes the domain connection and separates domain implementation from other modules. 
+3)Persistence: A module created for local operations.
 
-Domain Module: Use case'ler ve domain modelleri içeren bağımsız bir modüldür.
+Domain Module: An independent module containing use cases and domain models.
 
-Core Module: Temel işlemleri ve genel işlevleri içeren bağımsız bir modüldür.
+Core Module: An independent module containing basic operations and general functions.
 
-Presentation Module: Farklı özelliklere sahip modülleri içerir ve modül tabanlı bir mimari kullanır.
+Presentation Module: Contains modules with different features and uses a module-based architecture.
 
-## Reactive Programming ile Veri Akışı
+## Data Flow with Reactive Programming
 
-Reactive programming prensiplerini kullanarak veri akışını yönetmek için Kotlin Flow'larını kullanır, State & Shared flow ve Clod flow. 
+It uses Kotlin Flows to manage data flow by applying reactive programming principles, including State & Shared flow and Cold flow.
 
-## CI iş akışı 
+## CI Workflow
 
-- Her push işlemi veya master dalına yapılan pull request (çekme isteği) işlemleri tetikleyici olarak kullanılır.
-- Ubuntu-Latest çalışma ortamı üzerinde aşağıdaki işlemler gerçekleştirilir:
-    - Depo (repository) çekilir.
-    - Java JDK 18 kurulumu yapılır.
-    - Gradle ile proje derlenir.
-    - Gradle ile testler çalıştırılır.
+Each push action or pull request to the master branch is used as a trigger.
+The following processes are carried out on the Ubuntu-Latest working environment:
+    -The repository is pulled.
+    -Java JDK 18 is installed.
+    -The project is compiled with Gradle.
+    -Tests are run with Gradle.
 
-## Performans İyileştirmeleri
-### Context Kullanımı
-- **Dikkatli Context Kullanımı**: Uygulama içinde Context kullanımına dikkat edilmiş ve gereksiz Context bağlantılarından kaçınılmıştır. Bu, gereksiz bellek tüketimini önler ve uygulamanın daha hızlı çalışmasını sağlar.
+## Performance Improvements
+### Careful Context Usage
+Attention has been paid to the use of Context within the application, avoiding unnecessary Context connections. This prevents unnecessary memory consumption and ensures the application runs faster.
 
-### Strong References Kontrolü
-- **Strong References Kontrolü**: Güçlü (strong) referansların kullanımı, gereksiz bellek sızıntılarını önlemek için göz önünde bulundurulmuştur. Kritik veri yapıları ve nesneler, gereksiz güçlü referanslardan kaçınarak daha iyi yönetilir gerektiği yerde nullable tanımlanarak işlem sonucu null atanmıştır..
+### Strong References Control
+The use of strong references is considered to prevent unnecessary memory leaks. Critical data structures and objects are managed better by avoiding unnecessary strong references and are defined as nullable where needed.
 
-### Fragment Lifecycle'a Göre İşlemler
-- **Fragment Lifecycle İzlemi**: Fragment'ların yaşam döngüsüne dikkat edilmiş ve uygun nullable işlemleri yapılmıştır. Bu, Fragment'lar arasındaki geçişler sırasında hata olasılığını azaltır ve uygulamanın daha kararlı çalışmasını sağlar.
+### Operations According to Fragment Lifecycle
+ Attention has been paid to the lifecycle of Fragments and appropriate nullable operations have been performed. This reduces the likelihood of errors during transitions between Fragments and ensures more stable operation of the application.
 
-## Dependency Catalog (Bağımlılık Kataloğu)
+## Dependency Catalog
 
-Projede kullanılan bağımlılıkların listesi ve sürümleri, `libs.versions.toml`  adlı bir TOML dosyasında toplanmıştır. Bu dosya, projede kullanılan bağımlılıkları ve sürümlerini içerir ve tek yerden yönetilir.
+A list and versions of dependencies used in the project are compiled in a TOML file named libs.versions.toml. This file contains the dependencies and their versions used in the project and is managed from a single point.
 
 ## Configuration Change
 
-Bu proje, Android uygulamanızın veri yönetimi ve yaşam döngüsü yönetimi için View Model'leri kullanır. View Model'ler, verilerinizi etkili bir şekilde saklamak ve activity veya fragmentlar arasında paylaşmak için kullanılır. Ayrıca, yapılandırma değişiklikleri (örneğin ekran döndürme) sırasında verilerinizin korunmasına yardımcı olur.
+This project uses View Models for data management and lifecycle management of your Android application. View Models are used to effectively store your data and share it between activities or fragments. They also help preserve your data during configuration changes (e.g., screen rotation).
 
-## Güvenlik Anahtarlar 
+## Security Keys
 
-Proje içindeki hassas bilgiler (örneğin, API anahtarları) BUILD_CONFIG dosyasında saklanır.
-Bu dosya projenin güvenliğini artırmak ve hassas bilgilerin sızdırılmasını önlemek için git deposuna eklenmez. 
-Aşağıda, BUILD_CONFIG dosyasına örnek bir bakış bulabilirsiniz:
+Sensitive information in the project (e.g., API keys) is stored in the BUILD_CONFIG file.
+This file is not added to the git repository to increase the security of the project and prevent leakage of sensitive information.
+Below, you can find an example overview of the BUILD_CONFIG file:
 
 ```kotlin
 object BuildConfig {
