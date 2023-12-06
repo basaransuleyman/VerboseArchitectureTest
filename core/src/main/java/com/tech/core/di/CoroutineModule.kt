@@ -1,7 +1,7 @@
 package com.tech.core.di
 
-import com.tech.core.IOCoroutineScope
-import com.tech.core.IODispatcher
+import com.tech.core.utils.IOCoroutineScope
+import com.tech.core.utils.IODispatcher
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -15,7 +15,6 @@ inline fun <T> Fragment.collectWithLifecycle(
     crossinline block: (T) -> Unit = {}
 ) {
     viewLifecycleOwner.lifecycleScope.launch(CoroutineExceptionHandler { _, throwable ->
-        // TODO Nuke printing stack trace later
         throwable.printStackTrace()
         onError(throwable)
     }) {

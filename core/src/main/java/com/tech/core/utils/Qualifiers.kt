@@ -1,4 +1,4 @@
-package com.tech.core
+package com.tech.core.utils
 
 import javax.inject.Qualifier
 
