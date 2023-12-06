@@ -1,0 +1,4 @@
+<resources>
+    <color name="active_color">#FF00FF00</color>
+    <color name="passive_color">#FFFF0000</color>
+</resources>
