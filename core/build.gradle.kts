@@ -27,7 +27,7 @@ android {
                 name = "BASE_URL",
                 value = "\"https://raw.githubusercontent.com/\""
             )
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
