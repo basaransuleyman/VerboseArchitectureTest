@@ -39,7 +39,6 @@ dependencies {
     implementation(project(":domain"))
     implementation(project(":core"))
 
-    implementation("com.google.code.gson:gson:2.10.1")
     implementation(libs.hilt.core)
     kapt(libs.hilt.compiler)
 
