@@ -1,9 +1,10 @@
-package com.tech.satelittes
+package com.tech.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
-import com.tech.satelittes.databinding.ActivityMainBinding
+import com.tech.presentation.databinding.ActivityMainBinding
+
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
