@@ -59,5 +59,10 @@ dependencies {
     implementation(libs.androidx.constraint.layout)
     implementation( libs.appcompat)
     implementation( libs.android.core)
+
     androidTestImplementation (libs.espresso.core)
+    testImplementation(libs.junit)
+    testImplementation(libs.truth.core)
+    testImplementation(libs.mockk)
+    testImplementation(libs.coroutines.test)
 }
