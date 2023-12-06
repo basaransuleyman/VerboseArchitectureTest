@@ -5,6 +5,6 @@ import retrofit2.Response
 import retrofit2.http.GET
 
 interface Api {
-    @GET("/basaransuleyman/suleyman-basaranoglu-json/main/list")
+    @GET(BuildConfig.GET_API_REQUEST)
     suspend fun getInitialData(): Response<List<Satellite>>
 }

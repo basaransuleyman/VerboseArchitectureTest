@@ -17,14 +17,33 @@ android {
         consumerProguardFiles("consumer-rules.pro")
     }
 
+    buildFeatures {
+        buildConfig = true
+    }
+
     buildTypes {
         release {
-            isMinifyEnabled = false
+            buildConfigField(
+                type = "String",
+                name = "GET_API_REQUEST",
+                value = "\"/basaransuleyman/suleyman-basaranoglu-json/main/list\""
+            )
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
         }
+
+        debug {
+            buildConfigField(
+                type = "String",
+                name = "GET_API_REQUEST",
+                value = "\"/basaransuleyman/suleyman-basaranoglu-json/main/list\""
+            )
+        }
+
+
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
