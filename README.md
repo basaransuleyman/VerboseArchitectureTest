@@ -19,7 +19,12 @@ Presentation Module: Farklı özelliklere sahip modülleri içerir ve modül tab
     - Gradle ile proje derlenir.
     - Gradle ile testler çalıştırılır.
 
-## Güvenli Anahtarlar 
+
+### Dependency Catalog (Bağımlılık Kataloğu)
+
+Projede kullanılan bağımlılıkların listesi ve sürümleri, `libs.versions.toml`  adlı bir TOML dosyasında toplanmıştır. Bu dosya, projede kullanılan bağımlılıkları ve sürümlerini içerir ve tek yerden yönetilir.
+
+## Güvenlik Anahtarlar 
 
 Proje içindeki hassas bilgiler (örneğin, API anahtarları) BUILD_CONFIG dosyasında saklanır.
 Bu dosya projenin güvenliğini artırmak ve hassas bilgilerin sızdırılmasını önlemek için git deposuna eklenmez. 
@@ -29,3 +34,4 @@ Aşağıda, BUILD_CONFIG dosyasına örnek bir bakış bulabilirsiniz:
 object BuildConfig {
     const val BASE_URL = "https://xxx/"
 }
+ 
