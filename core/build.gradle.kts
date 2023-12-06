@@ -59,4 +59,7 @@ dependencies {
     implementation(libs.coroutines.core)
     implementation(libs.hilt.core)
     kapt(libs.hilt.compiler)
+
+    implementation(libs.junit)
+    implementation(libs.coroutines.test)
 }
