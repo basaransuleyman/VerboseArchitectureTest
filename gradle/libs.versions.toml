@@ -17,7 +17,7 @@ okhttp = "4.10.0"
 rxJava = "2.1.1"
 lifecycleRuntimeKtx = "2.4.0"
 lifecycle-view-model = "2.5.1"
-navigation = "2.4.2"
+navigation = "2.6.0"
 constraint = "2.1.2"
 android-activity = "1.6.1"
 coroutinesCore = "1.6.3"
@@ -49,11 +49,14 @@ androidx-activitiy = { module = "androidx.activity:activity-compose", version.re
 androidx-navigation = { module = "androidx.navigation:navigation-compose", version.ref = "navigation-compose" }
 coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutinesCore" }
 fragment = { module = "androidx.fragment:fragment-ktx", version.ref = "fragment" }
+androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version = "2.7.5" }
+androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version = "2.7.5" }
 
 [plugins]
 com-android-application = { id = "com.android.application", version.ref = "agp" }
 org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "org-jetbrains-kotlin-android" }
 com-android-library = { id = "com.android.library", version.ref = "agp" }
 com-android-dagger = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+navigation-safe-args = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }
 [bundles]
 
