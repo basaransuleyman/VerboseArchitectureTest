@@ -1,6 +1,6 @@
 package com.tech.domain_impl.usecase
 
-import com.tech.core.IODispatcher
+import com.tech.core.utils.IODispatcher
 import com.tech.domain.model.SatelliteDomainModel
 import com.tech.domain.usecase.SatelliteUseCase
 import com.tech.domain_impl.mapper.InitialDataMapper

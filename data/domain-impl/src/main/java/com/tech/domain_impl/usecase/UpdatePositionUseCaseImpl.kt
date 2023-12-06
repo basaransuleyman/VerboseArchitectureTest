@@ -1,6 +1,6 @@
 package com.tech.domain_impl.usecase
 
-import com.tech.core.IODispatcher
+import com.tech.core.utils.IODispatcher
 import com.tech.domain.model.Position
 import com.tech.domain.usecase.UpdatePositionUseCase
 import com.tech.persistence.storage.ClientStorage
