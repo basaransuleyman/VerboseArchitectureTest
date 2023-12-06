@@ -94,7 +94,6 @@ class SatellitesListFragment : Fragment() {
         super.onDestroyView()
         // Possible Memory Leak Reducing
         _binding = null
-        binding.recyclerView.adapter = null
         satelliteAdapter = null
     }
 }
