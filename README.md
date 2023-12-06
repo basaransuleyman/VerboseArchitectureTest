@@ -20,8 +20,12 @@ Presentation Module: Farklı özelliklere sahip modülleri içerir ve modül tab
     - Gradle ile testler çalıştırılır.
 
 
-### Dependency Catalog (Bağımlılık Kataloğu)
+## Dependency Catalog (Bağımlılık Kataloğu)
 Projede kullanılan bağımlılıkların listesi ve sürümleri, `libs.versions.toml`  adlı bir TOML dosyasında toplanmıştır. Bu dosya, projede kullanılan bağımlılıkları ve sürümlerini içerir ve tek yerden yönetilir.
+
+## Configuration Change
+
+Bu proje, Android uygulamanızın veri yönetimi ve yaşam döngüsü yönetimi için View Model'leri kullanır. View Model'ler, verilerinizi etkili bir şekilde saklamak ve activity veya fragmentlar arasında paylaşmak için kullanılır. Ayrıca, yapılandırma değişiklikleri (örneğin ekran döndürme) sırasında verilerinizin korunmasına yardımcı olur.
 
 ## Güvenlik Anahtarlar 
 
