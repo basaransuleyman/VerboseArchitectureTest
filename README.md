@@ -36,7 +36,6 @@ Reactive programming prensiplerini kullanarak veri akışını yönetmek için K
 
 - **Fragment Lifecycle İzlemi**: Fragment'ların yaşam döngüsüne dikkat edilmiş ve uygun nullable işlemleri yapılmıştır. Bu, Fragment'lar arasındaki geçişler sırasında hata olasılığını azaltır ve uygulamanın daha kararlı çalışmasını sağlar.
 
-Performans iyileştirmeleri, kullanıcı deneyimini artırmanın yanı sıra uygulamanın daha hızlı ve daha verimli çalışmasına yardımcı olur. Bu projede bu prensiplere sadık kalınarak daha iyi bir performans elde edilmiştir.
 ## Dependency Catalog (Bağımlılık Kataloğu)
 Projede kullanılan bağımlılıkların listesi ve sürümleri, `libs.versions.toml`  adlı bir TOML dosyasında toplanmıştır. Bu dosya, projede kullanılan bağımlılıkları ve sürümlerini içerir ve tek yerden yönetilir.
 
