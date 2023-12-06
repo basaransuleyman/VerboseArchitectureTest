@@ -27,6 +27,5 @@ Aşağıda, BUILD_CONFIG dosyasına örnek bir bakış bulabilirsiniz:
 
 ```kotlin
 object BuildConfig {
-    const val BASE_URL = "https://api.example.com/"
-    const val API_KEY = "your_api_key_here"
+    const val BASE_URL = "https://xxx/"
 }
