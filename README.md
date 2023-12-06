@@ -1,7 +1,7 @@
 # tech
 
 
-##Mimari
+## Mimari
 Bu proje, Clean Architecture ([Temiz Mimarlık]) prensiplerine dayalı olarak inşa edilmiştir. Temel mimari bileşenleri şunlardır:
 
 Data Module: API ; ağ işlemleri için ayrı bir modül içerir. Domain-Impl : Domain baglantısı sağlanır ve ayrılarak domain implementasyonu kırılmıştır diğer modullerden. Persistence: Local işlemler için oluşturulmuş module.
@@ -10,7 +10,7 @@ Core Module: Temel işlemleri ve genel işlevleri içeren bağımsız bir modül
 Presentation Module: Farklı özelliklere sahip modülleri içerir ve modül tabanlı bir mimari kullanır.
 
 
-##CI iş akışı 
+## CI iş akışı 
 
 - Her push işlemi veya master dalına yapılan pull request (çekme isteği) işlemleri tetikleyici olarak kullanılır.
 - Ubuntu-Latest çalışma ortamı üzerinde aşağıdaki işlemler gerçekleştirilir:
