@@ -66,4 +66,9 @@ dependencies {
     implementation(libs.rx.java.core)
     implementation(libs.android.core)
     implementation(libs.appcompat)
+
+    testImplementation(libs.junit)
+    testImplementation(libs.truth.core)
+    testImplementation(libs.mockk)
+    testImplementation(libs.coroutines.test)
 }
