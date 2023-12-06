@@ -42,11 +42,14 @@ android {
 
 dependencies {
     implementation(project(":presentation"))
-    implementation(project(":data"))
+    implementation(project(":data:api"))
+    implementation(project(":data:domain-impl"))
     implementation(project(":domain"))
     implementation(project(":core"))
 
     implementation(libs.hilt.core)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
     kapt(libs.hilt.compiler)
     implementation(libs.navigation.fragment.ktx)
     implementation(libs.navigation.ui.ktx)
