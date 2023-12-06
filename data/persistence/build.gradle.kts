@@ -39,6 +39,7 @@ dependencies {
     implementation(project(":domain"))
     implementation(project(":core"))
 
+    implementation(libs.gson)
     implementation(libs.hilt.core)
     kapt(libs.hilt.compiler)
 
