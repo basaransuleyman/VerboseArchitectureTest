@@ -12,11 +12,3 @@ fun List<SatelliteDomainModel>.toUiModelList(): List<SatelliteUIModel> {
         )
     }
 }
-
-fun SatelliteDomainModel.toUiModel(): SatelliteUIModel {
-    return SatelliteUIModel(
-        id = this.id,
-        active = this.active,
-        name = this.name
-    )
-}

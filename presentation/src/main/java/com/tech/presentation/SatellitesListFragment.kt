@@ -79,7 +79,7 @@ class SatellitesListFragment : Fragment() {
             satelliteClickListener = { satelliteID ->
                 navController.navigate(
                     R.id.satelliteDetailFragment,
-                    viewModel.setBundle(satelliteID)
+                    setBundle(satelliteID)
                 )
             }
         )
@@ -88,6 +88,13 @@ class SatellitesListFragment : Fragment() {
                 LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
             adapter = satelliteAdapter
         }
+    }
+
+    private fun setBundle(satelliteID: Int): Bundle {
+        val bundle = Bundle().apply {
+            putInt("satelliteID", satelliteID)
+        }
+        return bundle
     }
 
     override fun onDestroyView() {

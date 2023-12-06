@@ -1,6 +1,5 @@
 package com.tech.presentation
 
-import android.os.Bundle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.tech.domain.usecase.SatelliteUseCase
@@ -18,15 +17,17 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+
 @HiltViewModel
-class SatellitesListViewModel @Inject constructor(private val getSatelliteUseCase: SatelliteUseCase) :
-    ViewModel() {
+class SatellitesListViewModel @Inject constructor(
+    private val getSatelliteUseCase: SatelliteUseCase
+) : ViewModel() {
 
     private val _satelliteListState =
         MutableStateFlow<SatelliteListViewState>(SatelliteListViewState.Loading)
     val satelliteListState = _satelliteListState.asStateFlow()
 
-    private val searchQuery = MutableStateFlow("")
+    val searchQuery = MutableStateFlow("")
 
     fun loadSatellites() {
         viewModelScope.launch {
@@ -34,10 +35,12 @@ class SatellitesListViewModel @Inject constructor(private val getSatelliteUseCas
                 .onStart { delay(500) }
                 .onStart { _satelliteListState.value = SatelliteListViewState.Loading }
                 .collect { satellites ->
-                    _satelliteListState.value = SatelliteListViewState.Success(satellites.toUiModelList())
+                    _satelliteListState.value =
+                        SatelliteListViewState.Success(satellites.toUiModelList())
                 }
         }
     }
+
     @OptIn(FlowPreview::class, ExperimentalCoroutinesApi::class)
     fun startSearch() {
         viewModelScope.launch {
@@ -52,16 +55,10 @@ class SatellitesListViewModel @Inject constructor(private val getSatelliteUseCas
                         }
                     }
                 }.collect { filteredSatellites ->
-                    _satelliteListState.value = SatelliteListViewState.Success(filteredSatellites.toUiModelList())
+                    _satelliteListState.value =
+                        SatelliteListViewState.Success(filteredSatellites.toUiModelList())
                 }
         }
-    }
-
-    fun setBundle(satelliteID: Int): Bundle {
-        val bundle = Bundle().apply {
-            putInt("satelliteID", satelliteID)
-        }
-        return bundle
     }
 
     fun updateSearchQuery(query: String) {
