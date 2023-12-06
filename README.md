@@ -1,5 +1,7 @@
 # tech
 
+![CI Status](https://github.com/basaransuleyman/tech/actions/workflows/ci.yml/badge.svg)
+
 
 ## Mimari
 Clean Architecture prensiplerine dayalı olarak inşa edilmiştir. Temel mimari bileşenleri şunlardır:
