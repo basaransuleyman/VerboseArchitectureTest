@@ -5,8 +5,11 @@
 Clean Architecture prensiplerine dayalı olarak inşa edilmiştir. Temel mimari bileşenleri şunlardır:
 
 Data Module: API ; ağ işlemleri için ayrı bir modül içerir. Domain-Impl : Domain baglantısı sağlanır ve ayrılarak domain implementasyonu kırılmıştır diğer modullerden. Persistence: Local işlemler için oluşturulmuş module.
+
 Domain Module: Use case'ler ve domain modelleri içeren bağımsız bir modüldür.
+
 Core Module: Temel işlemleri ve genel işlevleri içeren bağımsız bir modüldür.
+
 Presentation Module: Farklı özelliklere sahip modülleri içerir ve modül tabanlı bir mimari kullanır.
 
 ## Reactive Programming ile Veri Akışı
