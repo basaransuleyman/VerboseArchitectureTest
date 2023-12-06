@@ -21,7 +21,6 @@ Presentation Module: Farklı özelliklere sahip modülleri içerir ve modül tab
 
 
 ### Dependency Catalog (Bağımlılık Kataloğu)
-
 Projede kullanılan bağımlılıkların listesi ve sürümleri, `libs.versions.toml`  adlı bir TOML dosyasında toplanmıştır. Bu dosya, projede kullanılan bağımlılıkları ve sürümlerini içerir ve tek yerden yönetilir.
 
 ## Güvenlik Anahtarlar 
