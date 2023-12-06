@@ -38,14 +38,14 @@ internal class ClientStorageImpl @Inject constructor(
         return response.list.firstOrNull { it.id == id.toString() }?.positions ?: emptyList()
     }
 
-    private fun checkMemoryForJson(id: Int): SatelliteDetailResponse? {
+    fun checkMemoryForJson(id: Int): SatelliteDetailResponse? {
         return sharedPreferences.getString("SatelliteDetail_$id", null)?.let {
             // Convert JSON string to SatelliteDetailDomainModel
             gson.fromJson(it, SatelliteDetailResponse::class.java)
         }
     }
 
-    private fun saveJsonToMemory(id: Int, satelliteDetail: SatelliteDetailResponse?) {
+    fun saveJsonToMemory(id: Int, satelliteDetail: SatelliteDetailResponse?) {
         satelliteDetail?.let {
             // Convert SatelliteDetailDomainModel to JSON string and save
             sharedPreferences.edit()
