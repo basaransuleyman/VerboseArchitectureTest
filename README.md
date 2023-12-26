@@ -4,18 +4,7 @@
 
 
 ## Architecture
-It is built based on Clean Architecture principles. The main architectural components are:
-
-Data Module: 
-1)API Module: Contains a separate module for API and network operations. 
-2)Domain-Impl: Establishes the domain connection and separates domain implementation from other modules. 
-3)Persistence: A module created for local operations.
-
-Domain Module: An independent module containing use cases and domain models.
-
-Core Module: An independent module containing basic operations and general functions.
-
-Presentation Module: Contains modules with different features and uses a module-based architecture.
+Working on 
 
 ## Data Flow with Reactive Programming
 
